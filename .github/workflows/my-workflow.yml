@@ -1,10 +1,14 @@
-https://github.com/Anurenjini78/writing-javascript-actions/edit/add-initial-workflow/.github/workflows/my-workflow.yml?pr=/Anurenjini78/writing-javascript-actions/pull/2name: JS Actions
+name: JS Actions
 
 on: [push]
 
 jobs:
   action:
+
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+    - uses: actions/checkout@v1
+
+    - name: hello-action
+      uses: ./.github/actions/hello-world
